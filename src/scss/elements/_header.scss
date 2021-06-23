@@ -1,0 +1,14 @@
+.header {
+    height: 100vh;
+
+    &__container {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

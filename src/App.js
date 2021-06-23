@@ -1,19 +1,21 @@
 import React from 'react';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-
-// import {
-//   HashRouter,
-//   Route,
-//   Link,
-//   Switch,
-//   NavLink,
-// } from 'react-router-dom';
+import SignUp from './components/SignUp';
+import Login from './components/Login';
 
 
 function App() {
   return (
-    <Home />
+    <BrowserRouter>
+      <>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/" component={Login}/>
+          <Route path="/signup" component={SignUp}/>
+        </Switch>
+      </>
+    </BrowserRouter>
   );
 }
 
