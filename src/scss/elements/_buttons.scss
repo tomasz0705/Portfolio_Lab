@@ -1,0 +1,14 @@
+.link__element {
+    width: 270px;
+    display: inline-block;
+    padding: 20px 30px;
+    border: 1px solid $color-darkgrey;
+    font-size: 34px;
+    color: $color-darkgrey;
+    text-align: center;
+    font-weight: 300;
+
+    &:first-child {
+        margin-right: 25px;
+    }
+}

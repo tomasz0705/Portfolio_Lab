@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
+import ButtonLink from '../buttons/ButtonLink';
+import SectionHeader from '../section-header/SectionHeader';
 
 function HomeHeader() {
     return (
@@ -23,9 +25,13 @@ function HomeHeader() {
                             <li className="nav__element"><NavHashLink to="/#contact" className="nav__link">Kontakt</NavHashLink></li>
                         </ul>
                     </nav>
+                    <SectionHeader text1={"Zacznij, pomagać!"} text2={"Oddaj niechciane rzeczy w zaufane ręce"}/>
+                    <div className="header__buttons">
+                        <ButtonLink path={"/login"} text={"ODDAJ RZECZY"}/>
+                        <ButtonLink path={"/login"} text={"ZORGANIZUJ ZBIÓRKĘ"}/>
+                    </div>
                 </div>
             </div>
-
         </header>
     );
 }
