@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
-import ButtonLink from '../buttons/ButtonLink';
-import SectionHeader from '../section-header/SectionHeader';
+import ButtonLink from './buttons/ButtonLink';
+import SectionHeader from './section-header/SectionDecoration';
 
 function HomeHeader() {
     return (

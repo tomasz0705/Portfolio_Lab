@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SectionHeader({ text1, text2 }) {
+function SectionDecoration({ text1, text2 }) {
     return(
         <div className="section__header">
             <h1>{text1}<br/>
@@ -11,4 +11,4 @@ function SectionHeader({ text1, text2 }) {
     );
 }
 
-export default SectionHeader;
+export default SectionDecoration;

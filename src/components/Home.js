@@ -1,9 +1,13 @@
 import React from 'react';
-import HomeHeader from './header/HomeHeader';
+import HomeHeader from './HomeHeader';
+import HomeThreeColumns from './HomeThreeColumns';
 
 function Home() {
     return (
-        <HomeHeader />
+        <>
+            <HomeHeader />
+            <HomeThreeColumns />
+        </>
     );
 }
 

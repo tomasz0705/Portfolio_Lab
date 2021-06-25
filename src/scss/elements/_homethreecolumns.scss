@@ -1,0 +1,38 @@
+.threecolumns {
+    width: 100%;
+    height: 100%;
+    background: $color-yellow;
+
+    &__container {
+        padding: 80px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &__column {
+        width: 100%;
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        h1 {
+            font-size: 80px;
+            font-weight: 300;
+            color: $color-darkgrey;
+        }
+
+        span {
+            font-size: 18px;
+            margin-top: 25px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 25px;
+            line-height: 1.5;
+        }
+    }
+}
