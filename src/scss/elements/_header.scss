@@ -14,6 +14,7 @@
         height: 100vh;
         margin-top: 30px;
         z-index: 0;
+        overflow: hidden;
 
         .image {
             width: 70%;
@@ -78,28 +79,15 @@
         }
     }
 
-    .section__header {
-        text-align: center;
-
-        h1 {
-            font-size: 36px;
-            color: $color-darkgrey;
-            line-height: 1.5;
-        }
-
-        .section__decoration {
-            width: 100%;
-            height: 50px;
-            background-image: url('../../assets/Decoration.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-top: 10px;
-        }
-    }
-
     &__buttons {
         margin-top: 60px;
         display: flex;
         justify-content: center;
+
+        .link__element {
+            &:first-child {
+                margin-right: 25px;
+            }
+        }
     }
 }
