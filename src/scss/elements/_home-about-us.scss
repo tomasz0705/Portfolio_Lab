@@ -1,5 +1,5 @@
 .aboutus {
-    background: $color-lightgrey;
+
 
     &__container {
         width: 100%;
@@ -10,12 +10,12 @@
 
     &__description {
         width: 50%;
+        background: $color-lightgrey;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // align-items: center;
         text-align: center;
-        padding: 30px 50px;
+        padding: 40px 60px;
     }
 
     &__text {
@@ -30,25 +30,16 @@
         justify-content: flex-end;
 
         .signature {
-            width: 100px;
-            height: 100px;
+            max-width: 100%;
+            height: auto;
         }
     }
 
     &__image {
-        height: 100%;
-        // .image {
-        //     width: 500px;
-        //     height: 500px;
-        //     background: url('../../assets/People.jpg');
-        //     background-position: center;
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-
-        // }
+        width: 50%;
         img {
-            width: 700px;
-            height: 500px;
+            max-width: 100%;
+            height: auto;
         }
     }
 }

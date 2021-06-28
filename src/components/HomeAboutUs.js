@@ -1,5 +1,7 @@
 import React from 'react';
 import SectionDecoration from './section-decoration/SectionDecoration';
+import signature from '../assets/Signature.svg';
+import people from '../assets/People.jpg';
 
 function HomeAboutUs() {
     return (
@@ -15,12 +17,11 @@ function HomeAboutUs() {
                         tym samym ułatwi użytkownikom oddanie rzeczy.
                     </div>
                     <div className="aboutus__signature">
-                        <img src={require('../assets/Signature.svg')} className="signature" alt="signature"/>
+                        <img src={signature} className="signature" alt="signature"/>
                     </div>
                 </div>
                 <div className="aboutus__image">
-                    {/* <div className="image"></div> */}
-                    <img src={require('../assets/People.jpg')} alt="people" />
+                    <img src={people} alt="people" />
                 </div>
             </div>
         </div>
