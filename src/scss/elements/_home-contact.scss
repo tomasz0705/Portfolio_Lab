@@ -1,0 +1,87 @@
+.contact {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+        background: url('../../assets/Background-Contact-Form.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+
+    &__container {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            padding-top: 20px;
+
+            label {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            input {
+                width: 16rem;
+                border: none;
+                border-bottom: 1px solid $color-shade-first;
+                font-size: 1.125rem;
+                margin: 0.75rem 0;
+                padding: 5px;
+                background-color: transparent;
+            }
+            ::placeholder {
+                color: $color-shade-second;
+                font-family: $font-base;
+            }
+        }
+
+        .form__inputs {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .form__textarea {
+            textarea {
+                border: none;
+                border-bottom: 1px solid $color-shade-first;
+                width: 33rem;
+                height: 6rem;
+                margin: 0.75rem 0;
+                background-color: transparent;
+            }
+
+        }
+
+        .btn__contact {
+            display: flex;
+            justify-content: flex-end;
+
+            .btn__send {
+                border: 1px solid $color-darkgrey;
+                width: 8rem;
+                height: 3rem;
+            }
+        }
+    }
+}

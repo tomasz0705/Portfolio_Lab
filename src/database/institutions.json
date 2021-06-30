@@ -1,0 +1,130 @@
+{
+  "institutions": [
+      {
+          "id": 1,
+          "tile": "Fundacja Dbam o zdrowie",
+          "desc": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+          "resources": "ubrania, jedzenie, sprzęt AGD, meble, zabawki",
+          "type": "fundacja"
+      },
+      {
+          "id": 2,
+          "tile": "Fundacja Dla Dzieci",
+          "desc": "Pomoc dzieciom z ubogich rodzin.",
+          "resources": "ubrania, meble, zabawki",
+          "type": "fundacja"
+      },
+      {
+          "id": 3,
+          "tile": "Fundacja Bez Domu",
+          "desc": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+          "resources": "ubrania, jedzenie, ciepłe koce",
+          "type": "fundacja"
+      },
+      {
+          "id": 4,
+          "tile": "Fundacja czwarta",
+          "desc": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+          "resources": "ubrania, jedzenie, ciepłe koce",
+          "type": "fundacja"
+      },
+      {
+          "id": 5,
+          "tile": "Fundacja piąta",
+          "desc": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+          "resources": "ubrania, jedzenie, ciepłe koce",
+          "type": "fundacja"
+      },
+      {
+          "id": 6,
+          "tile": "Fundacja szósta",
+          "desc": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+          "resources": "ubrania, jedzenie, ciepłe koce",
+          "type": "fundacja"
+      },
+      {
+          "id": 7,
+          "tile": "Fundacja siódma",
+          "desc": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+          "resources": "ubrania, jedzenie, ciepłe koce",
+          "type": "fundacja"
+      },
+      {
+          "id": 8,
+          "tile": "Fundacja ósma",
+          "desc": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+          "resources": "ubrania, jedzenie, ciepłe koce",
+          "type": "fundacja"
+      },
+      {
+          "id": 9,
+          "tile": "Fundacja dziewiąta",
+          "desc": "Pomoc dla osób nie posiadających miejsca zamieszkania.",
+          "resources": "ubrania, jedzenie, ciepłe koce",
+          "type": "fundacja"
+      },
+      {
+        "id": 10,
+        "tile": "Organizacja Lorem Ipsum 1",
+        "desc": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+        "resources": "Egestas, sed, tempus",
+        "type": "organizacja"
+    },
+    {
+        "id": 11,
+        "tile": "Organizacja Lorem Ipsum 2",
+        "desc": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+        "resources": "Ut, aliquam, purus, sit, amet",
+        "type": "organizacja"
+    },
+    {
+        "id": 12,
+        "tile": "Organizacja Lorem Ipsum 3",
+        "desc": "Scelerisque in dictum non consectetur a erat nam.",
+        "resources": "Mi, quis, hendrerit, dolor",
+        "type": "organizacja"
+    },
+    {
+        "id": 13,
+        "tile": "Organizacja Lorem Ipsum 4",
+        "desc": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+        "resources": "Egestas, sed, tempus",
+        "type": "organizacja"
+    },
+    {
+        "id": 14,
+        "tile": "Organizacja Lorem Ipsum 5",
+        "desc": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+        "resources": "Egestas, sed, tempus",
+        "type": "organizacja"
+    },
+    {
+        "id": 15,
+        "tile": "Organizacja Lorem Ipsum 6",
+        "desc": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+        "resources": "Egestas, sed, tempus",
+        "type": "organizacja"
+    },
+    {
+        "id": 16,
+        "tile": "Zbiórka “Lorem Ipsum 1”",
+        "desc": "Quis varius quam quisque id diam vel quam elementum pulvinar.",
+        "resources": "Egestas, sed, tempus",
+        "type": "lokalne"
+    },
+    {
+        "id": 17,
+        "tile": "Zbiórka “Lorem Ipsum 2”",
+        "desc": "Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+        "resources": "Ut, aliquam, purus, sit, amet",
+        "type": "lokalne"
+    },
+    {
+        "id": 18,
+        "tile": "Zbiórka “Lorem Ipsum 3”",
+        "desc": "Scelerisque in dictum non consectetur a erat nam.",
+        "resources": "Mi, quis, hendrerit, dolor",
+        "type": "lokalne"
+    }
+  ]
+}

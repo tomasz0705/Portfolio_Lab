@@ -4,6 +4,7 @@ import HomeSimpleSteps from './HomeSimpleSteps';
 import HomeThreeColumns from './HomeThreeColumns';
 import HomeAboutUs from './HomeAboutUs';
 import HomeWhoWeHelp from './HomeWhoWeHelp';
+import HomeContact from './HomeContact';
 
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
             <HomeSimpleSteps />
             <HomeAboutUs />
             <HomeWhoWeHelp />
+            <HomeContact />
         </>
     );
 }

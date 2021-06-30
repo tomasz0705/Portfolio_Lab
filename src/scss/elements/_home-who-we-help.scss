@@ -1,11 +1,12 @@
 .whowehelp {
     &__container {
+        padding: 30px;
         display: flex;
         flex-direction: column;
     }
 
     .section__header {
-        padding-top: 40px;
+        padding-top: 30px;
     }
 
     &__buttons {
@@ -14,12 +15,21 @@
         justify-content: center;
         align-items: center;
 
-        .link__element {
+        .btn {
+            width: 230px;
             font-size: 24px;
             font-weight: 400;
-            border: transparent;
+            border: none;
+            outline: none;
+            padding: 10px 30px;
+            margin: 0 20px;
+            background: white;
 
             &:hover {
+                border: 1px solid $color-darkgrey;
+            }
+
+            &:focus {
                 border: 1px solid $color-darkgrey;
             }
         }
@@ -30,9 +40,45 @@
         margin-top: 50px;
         text-align: center;
         font-size: 22px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
 
+    &__organizations {
+        margin-top: 30px;
+
+        .organizations__content {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__btnpages {
+        margin-top: 30px;
         display: flex;
         justify-content: center;
+
+        .pagenumbers {
+            list-style: none;
+            display: flex;
+        }
+
+        .btn__page {
+            width: 40px;
+            font-size: 18px;
+            padding: 10px 5px;
+            margin: 0px 6px;
+            border: none;
+            background: white;
+
+            &:hover {
+                border: 1px solid $color-darkgrey;
+            }
+
+            &:focus {
+                border: 1px solid $color-darkgrey;
+            }
+        }
     }
 
 }
