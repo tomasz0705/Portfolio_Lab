@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import backgroundContact from '../assets/Background-Contact-Form.jpg'
+import HomeFooter from './HomeFooter';
 import SectionDecoration from './section-decoration/SectionDecoration';
 
 function HomeContact() {
@@ -45,6 +45,7 @@ function HomeContact() {
                         </div>
                     </form>
                 </div>
+                <HomeFooter />
             </div>
         </div>
     );

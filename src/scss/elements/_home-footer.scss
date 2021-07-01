@@ -1,0 +1,18 @@
+.footer {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+
+    &__info {
+        p {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__socialmedia {
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
