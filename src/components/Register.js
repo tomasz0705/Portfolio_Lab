@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SignUp() {
+function Register() {
     return(
         <div>
             <h1>Załóż konto</h1>
@@ -8,4 +8,4 @@ function SignUp() {
     );
 }
 
-export default SignUp;
+export default Register;

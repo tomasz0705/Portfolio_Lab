@@ -9,8 +9,12 @@ function HomeFooter() {
                 <p>Copyright by CodersLab</p>
             </div>
             <div className="footer__socialmedia">
-                <img src={facebook} alt="facebook-icon" />
-                <img src={instagram} alt="instagram-icon" />
+                <a href="https://www.facebook.com/">
+                    <img src={facebook} alt="facebook-icon" />
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src={instagram} alt="instagram-icon" />
+                </a>
             </div>
         </div>
     );

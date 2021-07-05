@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
-import SignUp from './components/SignUp';
+import Register from './components/Register';
 import Login from './components/Login';
 
 
@@ -12,7 +12,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/login" component={Login}/>
-          <Route path="/signup" component={SignUp}/>
+          <Route path="/register" component={Register}/>
         </Switch>
       </>
     </BrowserRouter>

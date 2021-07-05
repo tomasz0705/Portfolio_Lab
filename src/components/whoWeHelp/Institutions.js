@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 function Institutions({ institutions, selectedType }) {
@@ -18,6 +18,7 @@ function Institutions({ institutions, selectedType }) {
 
     /* let totalInstitutions = institutions.length; */
 
+    //Adjusting pageNumbers
     if(selectedType === "fundacja") {
         pageNumbers.push(1, 2, 3);
     } else if (selectedType === "organizacja") {
@@ -26,7 +27,11 @@ function Institutions({ institutions, selectedType }) {
         pageNumbers.push(1);
     }
 
-/*     for(let i = 1; i <= Math.ceil(totalInstitutions / institutionsPerPage); i++) {
+    useEffect(() => {
+        setCurrentPage(1);
+      }, [selectedType]);
+
+    /* for(let i = 1; i <= Math.ceil(totalInstitutions / institutionsPerPage); i++) {
         pageNumbers.push(i);
     } */
 
@@ -35,8 +40,8 @@ function Institutions({ institutions, selectedType }) {
             <ul className="list-group">
                 {institutions.filter((o) => o?.type === selectedType).slice(indexOfFirstInstitution, indexOfLastInstitution).map((el, i) => {
                     return (
-                        <>
-                            <div key={i} className="organizations__content">
+                        <li key={i}>
+                            <div className="organizations__content">
                                 <div className="organizations__name">
                                     <h3>{el?.tile}</h3>
                                     <p>{el?.desc}</p>
@@ -46,7 +51,7 @@ function Institutions({ institutions, selectedType }) {
                                 </div>
                             </div>
                             <hr/>
-                        </>
+                        </li>
                     );
                 })}
             </ul>

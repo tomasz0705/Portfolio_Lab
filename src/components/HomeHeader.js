@@ -15,7 +15,7 @@ function HomeHeader() {
                     <nav>
                         <ul className="header__nav header__nav--first">
                             <li className="nav__element" id="login"><Link to="/login" className="nav__link">Zaloguj</Link></li>
-                            <li className="nav__element" id="sign-in"><Link to="/signup" className="nav__link">Załóż konto</Link></li>
+                            <li className="nav__element" id="sign-in"><Link to="/register" className="nav__link">Załóż konto</Link></li>
                         </ul>
                         <ul className="header__nav header__nav--second">
                             <li className="nav__element"><NavHashLink to="/" className="nav__link">Start</NavHashLink></li>
