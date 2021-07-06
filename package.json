@@ -2,7 +2,7 @@
   "name": "portfolio-lab",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
+  "homepage": "https://tomasz0705.github.io/Put_Things_In_Good_Hands_in-React/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
