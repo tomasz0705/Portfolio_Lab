@@ -44,8 +44,13 @@
         &--first {
             margin-bottom: 20px;
             .nav__element {
-                padding: 10px 10px;
+                padding: 10px 20px;
                 font-size: 14px;
+                margin: 0px 10px;
+
+                &:last-child {
+                    margin-right: 0px;
+                }
 
                 &:first-child {
                     margin-right: 6px;
@@ -58,6 +63,7 @@
                 .nav__link {
                     color: $color-grey;
                     outline: none;
+                    padding: 10px 10px;
                 }
             }
         }
@@ -66,6 +72,11 @@
             .nav__element {
                 padding: 10px 20px;
                 font-size: 18px;
+                margin: 0px 10px;
+
+                &:last-child {
+                    margin-right: 0px;
+                }
 
                 &:hover {
                     border: 1px solid $color-darkgrey;
@@ -74,6 +85,7 @@
                 .nav__link {
                     color: $color-darkgrey;
                     outline: none;
+                    padding: 10px 10px;
                 }
             }
         }
