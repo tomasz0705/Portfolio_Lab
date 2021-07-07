@@ -1,0 +1,11 @@
+.register {
+    &__container {
+        padding-bottom: 30px;
+    }
+
+    .form__input {
+        &:nth-child(2) {
+            margin-bottom: 31px;
+        }
+    }
+}
