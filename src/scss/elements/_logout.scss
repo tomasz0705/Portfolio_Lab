@@ -1,0 +1,15 @@
+.logout {
+    .logout__buttons {
+        margin-top: 30px;
+
+        .link__element {
+            width: 160px;
+            font-size: 18px;
+            font-weight: 300;
+            border: none;
+            color: #000000;
+            padding: 17px 16px;
+            border: 0.75px solid $color-darkgrey;
+        }
+    }
+}
