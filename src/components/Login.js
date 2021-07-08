@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import ButtonLink from './buttons/ButtonLink';
 import SectionHeader from './section-decoration/SectionDecoration';
+import validateEmail from './validateEmail';
 
 function Login() {
+    const [form, setForm] = useState({
+        email: "",
+        password: ""
+    });
+    const [error, setError] = useState({
+        email: false,
+        password: false
+    });
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setForm((prevForm) => ({ ...prevForm, [name]: value}));
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if(!form.email || !validateEmail(form.email)) {
+            setError((prev) => ({ ...prev, email: true }));
+        } else setError((prev) => ({ ...prev, email: false}));
+
+        if(!form.password || form.password.length < 6) {
+            setError((prev) => ({ ...prev, password: true}));
+        } else setError((prev) => ({ ...prev, password: false}));
+    }
+
     return(
         <div className="login">
             <div className="login__container container">
@@ -25,26 +51,39 @@ function Login() {
                     <div className="login__menu">
                         <SectionHeader text1={"Zaloguj się"}/>
                         <div className="menu__form">
-                            <form>
-                                <div className="form__input">
-                                    <label>
-                                        Email
-                                    </label><br/>
-                                    <input type="text" name="email" className="login__input" />
+                            <form onSubmit={handleSubmit}>
+                                <div className="form__inputs">
+                                    <div className="form__input">
+                                        <label>
+                                            Email
+                                        </label><br/>
+                                        <input type="text" name="email" value={form.email} className="login__input" onChange={handleChange} /><br/>
+                                        {error.email === true ? (
+                                            <span className="error-message">Podane imię jest nieprawidłowe!</span>
+                                        ) : (
+                                            ""
+                                        )}
+                                    </div>
+                                    <div className="form__input">
+                                        <label>
+                                            Hasło
+                                        </label><br/>
+                                        <input type="password" name="password" value={form.password} className="login__input" onChange={handleChange} /><br/>
+                                        {error.password === true ? (
+                                            <span className="error-message">Podane hasło jest nieprawidłowe!</span>
+                                        ) : (
+                                            ""
+                                        )}
+                                    </div>
                                 </div>
-                                <div className="form__input">
-                                    <label>
-                                        Hasło
-                                    </label><br/>
-                                    <input type="password" name="password" className="login__input" />
+                                <div className="header__buttons">
+                                    <ButtonLink path={"/register"} text={"Załóż konto"}/>
+                                    <button type="submit">Zaloguj się</button>
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <div className="header__buttons">
-                        <ButtonLink path={"/register"} text={"Załóż konto"}/>
-                        <ButtonLink path={"/login"} text={"Zaloguj się"}/>
-                    </div>
+
                 </div>
             </div>
         </div>

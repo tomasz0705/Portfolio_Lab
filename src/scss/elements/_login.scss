@@ -19,55 +19,73 @@
 
         .menu__form {
             margin-top: 30px;
-            width: 25%;
-            padding: 40px 40px;
-            background-color: $color-lightgrey;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 35%;
 
-            .form__input {
-                color: $color-darkgrey;
+            .form__inputs {
+                padding: 40px 40px;
+                background-color: $color-lightgrey;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
 
-                &:first-child {
-                    margin-bottom: 31px;
+                .form__input {
+                    color: $color-darkgrey;
+
+                    &:first-child {
+                        margin-bottom: 31px;
+                    }
+
+                    label {
+                        font-size: 1rem;
+                        font-weight: 600;
+                    }
+
+                    .login__input {
+                        border: none;
+                        border-bottom: 1px solid $color-shade-first;
+                        background-color: transparent;
+                        padding: 6px 0;
+                        height: 40px;
+                    }
+
+                    .error-message {
+                        color: red;
+                        font-weight: 600;
+                        font-size: 0.8rem;
+                    }
                 }
+            }
 
-                label {
-                    font-size: 1rem;
-                    font-weight: 600;
-                }
+            .header__buttons {
+                margin-top: 50px;
 
-                .login__input {
+                .link__element {
+                    width: 140px;
+                    font-size: 18px;
+                    font-weight: 300;
                     border: none;
-                    border-bottom: 1px solid $color-shade-first;
-                    background-color: transparent;
-                    padding: 6px 0;
-                    height: 40px;
+                    color: #000000;
+                    padding: 13px 16px;
+
+                    &:nth-child(1) {
+                        margin-right: 100px;
+                    }
                 }
-            }
 
-        }
-    }
-
-    .header__buttons {
-        margin-top: 50px;
-
-        .link__element {
-            width: 140px;
-            font-size: 18px;
-            font-weight: 300;
-            border: none;
-            color: #000000;
-            padding: 13px 16px;
-
-            &:nth-child(1) {
-                margin-right: 100px;
-            }
-
-            &:nth-child(2) {
-                border: 0.75px solid $color-darkgrey;
-                margin-left: 100px;
+                button {
+                    width: 140px;
+                    font-size: 18px;
+                    font-weight: 300;
+                    border: none;
+                    color: #000000;
+                    padding: 13px 16px;
+                    border: 0.75px solid $color-darkgrey;
+                    margin-left: 100px;
+                    background-color: transparent;
+                    color: $color-darkgrey;
+                    outline: none;
+                }
             }
         }
     }
