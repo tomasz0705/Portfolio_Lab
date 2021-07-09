@@ -59,7 +59,7 @@ function Login() {
                                         </label><br/>
                                         <input type="text" name="email" value={form.email} className="login__input" onChange={handleChange} /><br/>
                                         {error.email === true ? (
-                                            <span className="error-message">Podane imię jest nieprawidłowe!</span>
+                                            <span className="error-message">Podany email jest nieprawidłowy!</span>
                                         ) : (
                                             ""
                                         )}
