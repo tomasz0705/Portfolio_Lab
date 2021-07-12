@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-lab/static/css/main.132baab8.chunk.css",
+    "main.css": "/portfolio-lab/static/css/main.c4acd1e0.chunk.css",
     "main.js": "/portfolio-lab/static/js/main.8c3aad6c.chunk.js",
     "main.js.map": "/portfolio-lab/static/js/main.8c3aad6c.chunk.js.map",
     "runtime-main.js": "/portfolio-lab/static/js/runtime-main.ce04c07b.js",
@@ -10,7 +10,7 @@
     "static/js/3.7eb3efd0.chunk.js": "/portfolio-lab/static/js/3.7eb3efd0.chunk.js",
     "static/js/3.7eb3efd0.chunk.js.map": "/portfolio-lab/static/js/3.7eb3efd0.chunk.js.map",
     "index.html": "/portfolio-lab/index.html",
-    "static/css/main.132baab8.chunk.css.map": "/portfolio-lab/static/css/main.132baab8.chunk.css.map",
+    "static/css/main.c4acd1e0.chunk.css.map": "/portfolio-lab/static/css/main.c4acd1e0.chunk.css.map",
     "static/js/2.c8413243.chunk.js.LICENSE.txt": "/portfolio-lab/static/js/2.c8413243.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/portfolio-lab/static/media/Home-Hero-Image.0c4f237f.jpg",
     "static/media/Facebook.1c1ea3ae.svg": "/portfolio-lab/static/media/Facebook.1c1ea3ae.svg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.ce04c07b.js",
     "static/js/2.c8413243.chunk.js",
-    "static/css/main.132baab8.chunk.css",
+    "static/css/main.c4acd1e0.chunk.css",
     "static/js/main.8c3aad6c.chunk.js"
   ]
 }
