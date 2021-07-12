@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { NavHashLink } from 'react-router-hash-link';
 import ButtonLink from './buttons/ButtonLink';
 import NavBar from './NavBar';
 import SectionHeader from './section-decoration/SectionDecoration';

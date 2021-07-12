@@ -1,5 +1,4 @@
 import React from 'react';
-// import { NavHashLink } from 'react-router-hash-link';
 import { Link } from 'react-scroll';
 
 function NavBar() {
@@ -11,6 +10,7 @@ function NavBar() {
                     to="start"
                     smooth={true}
                     duration={600}
+                    delay={200}
                     className="nav__link"
                 >
                     Start
@@ -22,6 +22,7 @@ function NavBar() {
                     to="about-project-idea"
                     smooth={true}
                     duration={600}
+                    delay={200}
                     className="nav__link"
                 >
                     O co chodzi?
@@ -33,6 +34,7 @@ function NavBar() {
                     to="about-us"
                     smooth={true}
                     duration={600}
+                    delay={200}
                     className="nav__link"
                 >
                     O nas
@@ -44,6 +46,7 @@ function NavBar() {
                     to="foundation-and-organizations"
                     smooth={true}
                     duration={600}
+                    delay={200}
                     className="nav__link"
                 >
                     Fundacja i organizacje
@@ -55,6 +58,7 @@ function NavBar() {
                     to="contact"
                     smooth={true}
                     duration={600}
+                    delay={200}
                     className="nav__link"
                 >
                     Kontakt
