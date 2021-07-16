@@ -8,7 +8,7 @@ import Logout from './components/Logout';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="put_things_in_good_hands_in-React">
       <>
         <Switch>
           <Route exact path="/" component={Home}/>
