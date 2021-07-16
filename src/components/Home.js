@@ -9,7 +9,6 @@ import HomeContact from './HomeContact';
 function Home() {
     return (
         <>
-          HELLO
             <HomeHeader />
             <HomeThreeColumns />
             <HomeSimpleSteps />
