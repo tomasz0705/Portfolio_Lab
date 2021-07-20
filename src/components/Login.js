@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ButtonLink from './buttons/ButtonLink';
-import NavBar from './NavBar';
+import NavBar from '../components/NavBar';
 import SectionHeader from './section-decoration/SectionDecoration';
 import validateEmail from './validateEmail';
 

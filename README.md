@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Put Things In Good Hands - React Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![]()](https://tomasz0705.github.io/put_things_in_good_hands_in-React/)
 
 ## Available Scripts
 
