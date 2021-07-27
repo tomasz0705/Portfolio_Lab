@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router';
 import ButtonLink from './buttons/ButtonLink';
 import NavBar from '../components/NavBar';
 import SectionHeader from './section-decoration/SectionDecoration';
 import validateEmail from './validateEmail';
+import app from '../config/firebase';
+import { AuthContext } from './Auth';
 
-function Login() {
+function Login({ history }) {
     const [form, setForm] = useState({
         email: "",
         password: ""
@@ -20,7 +23,7 @@ function Login() {
         setForm((prevForm) => ({ ...prevForm, [name]: value}));
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = useCallback(async event => {
         event.preventDefault();
         if(!form.email || !validateEmail(form.email)) {
             setError((prev) => ({ ...prev, email: true }));
@@ -29,6 +32,23 @@ function Login() {
         if(!form.password || form.password.length < 6) {
             setError((prev) => ({ ...prev, password: true}));
         } else setError((prev) => ({ ...prev, password: false}));
+
+        const { email, password } = event.target.elements;
+
+        try {
+            await app
+                .auth()
+                .signInWithEmailAndPassword(email.value, password.value);
+            history.push("/logged-in");
+        } catch (error) {
+            alert(error);
+        }
+    }, [history]);
+
+    const { currentUser } = useContext(AuthContext);
+
+    if(currentUser) {
+        return <Redirect to="/logged-in" />;
     }
 
     return(
@@ -84,4 +104,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default withRouter(Login);

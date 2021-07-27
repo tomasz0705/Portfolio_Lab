@@ -1,0 +1,19 @@
+.header__nav--loggedin {
+    .nav__element {
+        border: 1px solid white;
+
+        &:nth-child(2) {
+            border: 1px solid $color-yellow;
+            font-size: 13px;
+        }
+    }
+
+    .nav__logout {
+        border: none;
+        border: 1px solid white;
+        background-color: transparent;
+        font-size: 12px;
+        font-family: $font-base;
+        color: $color-grey;
+    }
+}

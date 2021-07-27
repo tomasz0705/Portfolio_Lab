@@ -52,14 +52,11 @@
 
                 &:last-child {
                     margin-right: 0px;
+                    border: 1px solid $color-yellow;
                 }
 
                 &:first-child {
                     margin-right: 6px;
-                }
-
-                &:hover {
-                    border: 1px solid $color-yellow;
                 }
 
                 .nav__link {
@@ -78,18 +75,19 @@
                 margin: 0px 10px;
                 border: 1px solid white;
 
-                &:last-child {
-                    margin-right: 0px;
+                &:first-child {
+                    border: 1px solid $color-darkgrey;
                 }
 
-                &:hover {
-                    border: 1px solid $color-darkgrey;
+                &:last-child {
+                    margin-right: 0px;
                 }
 
                 .nav__link {
                     color: $color-darkgrey;
                     outline: none;
                     padding: 10px 10px;
+                    cursor: pointer;
                 }
             }
         }

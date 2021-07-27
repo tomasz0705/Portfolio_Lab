@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
+import app from '../config/firebase';
 import ButtonLink from './buttons/ButtonLink';
 import NavBar from './NavBar';
 import SectionHeader from './section-decoration/SectionDecoration';
 import validateEmail from './validateEmail';
 
-function Register() {
+function Register({ history }) {
     const [form, setForm] = useState({
         email: "",
         password: "",
@@ -23,7 +25,7 @@ function Register() {
         setForm((prevForm) => ({ ...prevForm, [name]: value}));
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = useCallback(async event => {
         event.preventDefault();
         if(!form.email || !validateEmail(form.email)) {
             setError((prev) => ({ ...prev, email: true}));
@@ -40,7 +42,18 @@ function Register() {
         if(form.password !== form.password2) {
             setError((prev) => ({ ...prev, notTheSame: true}));
         } else setError((prev) => ({ ...prev, notTheSame: false}));
-    }
+
+        const { email, password } = event.target.elements;
+
+        try {
+            await app
+                .auth()
+                .createUserWithEmailAndPassword(email.value, password.value);
+            history.push("/logged-in");
+        } catch (error) {
+            alert(error);
+        }
+    }, [history]);
 
     return(
         <div className="login register">
@@ -119,4 +132,4 @@ function Register() {
     );
 }
 
-export default Register;
+export default withRouter(Register);
