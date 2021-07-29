@@ -92,20 +92,16 @@
             .page-item {
                 margin: 10px;
 
-                .page-button {
+                button {
                     border: none;
                     background-color: transparent;
                     font-size: 18px;
                     color: $color-darkgrey;
                     padding: 10px 10px;
+                }
 
-                    &:hover {
-                        border: 1px solid $color-shade-first;
-                    }
-
-                    &:focus {
-                        border: 1px solid $color-shade-first;
-                    }
+                .active {
+                    border: 1px solid $color-shade-first;
                 }
             }
         }

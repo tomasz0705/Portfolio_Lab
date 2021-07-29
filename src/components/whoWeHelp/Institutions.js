@@ -61,7 +61,10 @@ function Institutions({ institutions, selectedType }) {
                         {pageNumbers.map(number => {
                             return (
                                 <li key={number} className="page-item">
-                                    <button onClick={() => paginate(number)} className="page-button">
+                                    <button
+                                        onClick={() => paginate(number)}
+                                        className={currentPage === number ? "active" : ""}
+                                        >
                                         {number}
                                     </button>
                                 </li>
