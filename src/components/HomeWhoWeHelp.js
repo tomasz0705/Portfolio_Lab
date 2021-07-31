@@ -30,9 +30,9 @@ function HomeWhoWeHelp() {
             <div className="whowehelp__container container">
                 <SectionDecoration text1="Komu pomagamy?" />
                 <div className="whowehelp__buttons">
-                    <button className="btn" id="btn-foundation" onClick={()=>{ changeInstitution('fundacja') }}>Fundacjom</button>
-                    <button className="btn" id="btn-organizations" onClick={()=>{ changeInstitution('organizacja') }}>Organizacjom pozarządowym</button>
-                    <button className="btn" id="btn-locale" onClick={()=>{ changeInstitution('lokalne') }} >Lokalnym zbiórkom</button>
+                    <button className={selectedType === "fundacja" ? "active" : ""} id="btn-foundation" onClick={()=>{ changeInstitution('fundacja') }}>Fundacjom</button>
+                    <button className={selectedType === "organizacja" ? "active" : ""} id="btn-organizations" onClick={()=>{ changeInstitution('organizacja') }}>Organizacjom pozarządowym</button>
+                    <button className={selectedType === "lokalne" ? "active" : ""} id="btn-locale" onClick={()=>{ changeInstitution('lokalne') }} >Lokalnym zbiórkom</button>
                 </div>
                 <div className="whowehelp__description">
                 W naszej bazie znajdziesz listę zweryfikowanych Fundacji,
