@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/put_things_in_good_hands_in-React/static/css/main.00537169.chunk.css",
-    "main.js": "/put_things_in_good_hands_in-React/static/js/main.e6648365.chunk.js",
-    "main.js.map": "/put_things_in_good_hands_in-React/static/js/main.e6648365.chunk.js.map",
+    "main.js": "/put_things_in_good_hands_in-React/static/js/main.7c3cdcb9.chunk.js",
+    "main.js.map": "/put_things_in_good_hands_in-React/static/js/main.7c3cdcb9.chunk.js.map",
     "runtime-main.js": "/put_things_in_good_hands_in-React/static/js/runtime-main.4f3bd25a.js",
     "runtime-main.js.map": "/put_things_in_good_hands_in-React/static/js/runtime-main.4f3bd25a.js.map",
     "static/js/2.5b09575a.chunk.js": "/put_things_in_good_hands_in-React/static/js/2.5b09575a.chunk.js",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.4f3bd25a.js",
     "static/js/2.5b09575a.chunk.js",
     "static/css/main.00537169.chunk.css",
-    "static/js/main.e6648365.chunk.js"
+    "static/js/main.7c3cdcb9.chunk.js"
   ]
 }
