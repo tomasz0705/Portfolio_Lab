@@ -1,17 +1,38 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
 import Logout from './components/Logout';
-import { AuthProvider } from '../src/components/Auth';
-import PrivateRoute from './components/PrivateRoute';
-import LoggedIn from './components/LoggedIn';
+import { useSelector, useDispatch } from 'react-redux';
+import { login, logout, selectUser } from "./features/userSlice";
+import { auth } from "./config/firebase";
 
 
 function App() {
+  // const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        //user is logged in
+        dispatch(
+          login({
+            email: userAuth.email,
+            uid: userAuth.uid,
+            displayName: userAuth.displayName,
+            photoUrl: userAuth.photoURL,
+          })
+        );
+      } else {
+        //user is logged out
+        dispatch(logout());
+      }
+    });
+  }, []);
+
   return (
-    <AuthProvider>
       <Router basename={process.env.PUBLIC_URL}>
         <>
           <Switch>
@@ -19,11 +40,9 @@ function App() {
             <Route path="/login" component={Login}/>
             <Route path="/register" component={Register}/>
             <Route path="/logout" component={Logout}/>
-            <PrivateRoute path="/logged-in" component={LoggedIn}/>
           </Switch>
         </>
       </Router>
-    </AuthProvider>
   );
 }
 

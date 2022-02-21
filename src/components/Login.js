@@ -1,14 +1,18 @@
-import React, { useCallback, useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Redirect, withRouter } from 'react-router';
 import ButtonLink from './buttons/ButtonLink';
 import NavBar from '../components/NavBar';
 import SectionHeader from './section-decoration/SectionDecoration';
 import validateEmail from './validateEmail';
-import app from '../config/firebase';
-import { AuthContext } from './Auth';
+import { login } from '../features/userSlice';
+import { auth } from '../config/firebase';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
-function Login({ history }) {
+function Login() {
+    const dispatch = useDispatch();
+    let history = useHistory();
+
     const [form, setForm] = useState({
         email: "",
         password: ""
@@ -23,7 +27,7 @@ function Login({ history }) {
         setForm((prevForm) => ({ ...prevForm, [name]: value}));
     };
 
-    const handleSubmit = useCallback(async event => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         if(!form.email || !validateEmail(form.email)) {
             setError((prev) => ({ ...prev, email: true }));
@@ -33,22 +37,17 @@ function Login({ history }) {
             setError((prev) => ({ ...prev, password: true}));
         } else setError((prev) => ({ ...prev, password: false}));
 
-        const { email, password } = event.target.elements;
+        // const { email, password } = event.target.elements;
 
-        try {
-            await app
-                .auth()
-                .signInWithEmailAndPassword(email.value, password.value);
-            history.push("/logged-in");
-        } catch (error) {
-            alert(error);
-        }
-    }, [history]);
-
-    const { currentUser } = useContext(AuthContext);
-
-    if(currentUser) {
-        return <Redirect to="/logged-in" />;
+        auth.signInWithEmailAndPassword(form.email, form.password)
+            .then(userAuth => {
+                dispatch(login({
+                    email: userAuth.user.email,
+                    uid: userAuth.user.uid,
+                    // displayName: userAuth.user.displayName,
+                    // profileUrl: userAuth.user.photoURL,
+                }));history.push("/");
+            }).catch((error) => alert(error));
     }
 
     return(
@@ -104,4 +103,4 @@ function Login({ history }) {
     );
 }
 
-export default withRouter(Login);
+export default Login;

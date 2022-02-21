@@ -11,6 +11,7 @@ function NavBar() {
                     smooth={true}
                     duration={600}
                     delay={200}
+                    spy={true}
                     className="nav__link"
                 >
                     Start
@@ -23,6 +24,7 @@ function NavBar() {
                     smooth={true}
                     duration={600}
                     delay={200}
+                    spy={true}
                     className="nav__link"
                 >
                     O co chodzi?
@@ -35,6 +37,7 @@ function NavBar() {
                     smooth={true}
                     duration={600}
                     delay={200}
+                    spy={true}
                     className="nav__link"
                 >
                     O nas
@@ -47,6 +50,7 @@ function NavBar() {
                     smooth={true}
                     duration={600}
                     delay={200}
+                    spy={true}
                     className="nav__link"
                 >
                     Fundacja i organizacje
@@ -59,6 +63,7 @@ function NavBar() {
                     smooth={true}
                     duration={600}
                     delay={200}
+                    spy={true}
                     className="nav__link"
                 >
                     Kontakt

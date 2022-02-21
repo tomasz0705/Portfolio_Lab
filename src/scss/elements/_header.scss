@@ -75,9 +75,9 @@
                 margin: 0px 10px;
                 border: 1px solid white;
 
-                &:first-child {
+                /* &:first-child {
                     border: 1px solid $color-darkgrey;
-                }
+                } */
 
                 &:last-child {
                     margin-right: 0px;
@@ -88,6 +88,10 @@
                     outline: none;
                     padding: 10px 10px;
                     cursor: pointer;
+                }
+
+                .active {
+                    border: 1px solid $color-darkgrey !important;
                 }
             }
         }
