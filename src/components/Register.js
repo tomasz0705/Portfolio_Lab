@@ -56,8 +56,6 @@ function Register() {
                     dispatch(login({
                         email: userAuth.user.email,
                         uid: userAuth.user.uid,
-                        // displayName: name,
-                        // photoURL: profilePic,
                     }));history.push("/");
             }).catch((error) => alert(error));
         }

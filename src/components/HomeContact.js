@@ -26,7 +26,6 @@ function HomeContact() {
         console.log('form submitted', form);
 
         if(form.name.includes(" ") || form.name === "" || form.name.length < 2) {
-            console.log("imie")
             setError((prev) => ({ ...prev, name: true }));
             return;
         } else setError((prev) => ({ ...prev, name: false }));

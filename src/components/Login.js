@@ -44,8 +44,6 @@ function Login() {
                 dispatch(login({
                     email: userAuth.user.email,
                     uid: userAuth.user.uid,
-                    // displayName: userAuth.user.displayName,
-                    // profileUrl: userAuth.user.photoURL,
                 }));history.push("/");
             }).catch((error) => alert(error));
     }

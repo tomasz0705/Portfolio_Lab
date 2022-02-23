@@ -61,7 +61,7 @@ function HomeHeader() {
                         <SectionHeader text1={"Zacznij, pomagać!"} text2={"Oddaj niechciane rzeczy w zaufane ręce"}/>
                         <div className="header__buttons">
                             <ButtonLink path={"/give-away-things"} text={"ODDAJ RZECZY"}/>
-                            <ButtonLink path={"/login"} text={"ZORGANIZUJ ZBIÓRKĘ"}/>
+                            <ButtonLink path={"/give-away-things"} text={"ZORGANIZUJ ZBIÓRKĘ"}/>
                         </div>
                     </div>
                 </div>
